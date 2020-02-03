@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Poiret+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(./img/redCarpet2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+#outerDiv {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    padding-top: 1em;
+    font-family: "Poiret One", cursive;
+    font-weight: bolder;
+    color: whitesmoke;
+    font-size: 5em;
+}
+
+#startButton {
+    font-family: "Poiret One", cursive;
+    color: rgb(95, 95, 95);
+    background-color: whitesmoke;
+    font-weight: bolder;
+    font-size: 1em;
+    border-radius: 25%;
+    padding: 1%;
+    width: 6em;
+}

@@ -87,8 +87,6 @@ const cardCompareAge = () => {
     }
 }
 
-
-
 if (liveDeck1.length == 30){
     console.log("Player One wins")
 } else if (liveDeck2.length == 30) {
