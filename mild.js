@@ -51,31 +51,11 @@ let fullDeck = [
 function shuffle(fullDeck) {
     fullDeck.sort(() => Math.random() -0.5);
 }
-
-// function shuffle(fullDeck){
-//     let currentIndex = fullDeck.length, temporaryValue, randomIndex;
-
-//     while (0 !== currentIndex) {
-//         randomIndex = Math.floor(Math.random() * currentIndex);
-//         currentIndex -= 1;
-
-//         temporaryValue = fullDeck[currentIndex];
-//         fullDeck[currentIndex] = fullDeck[randomIndex];
-//         fullDeck[randomIndex] = temporaryValue;
-//     }
-//     return fullDeck;
-// }
-
 shuffle(fullDeck);
-console.log(fullDeck);
 
-// fullDeck.slice(0,14) = liveDeck1.push 
-// fullDeck.slice(15,29) = liveDeck2.push;
+let liveDeck1 = fullDeck.slice(0,15);
+let liveDeck2 = fullDeck.slice(15,30);
 
-// let liveDeck1 = [];
-// console.log(liveDeck1);
-// let liveDeck2 = [];
-// console.log(liveDeck2);
 
 // const cardCompare = () => {
 //     if (liveDeck1[0].age < liveDeck2[0].age) {
