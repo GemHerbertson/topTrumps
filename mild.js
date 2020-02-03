@@ -48,32 +48,51 @@ let fullDeck = [
     penelopeCruz = new ActorCard("Penelope Cruz", 45)
 ];
 
+// console.log(fullDeck);
+
 function shuffle(fullDeck) {
     fullDeck.sort(() => Math.random() -0.5);
 }
+
 shuffle(fullDeck);
+
+// console.log(fullDeck);
 
 let liveDeck1 = fullDeck.slice(0,15);
 let liveDeck2 = fullDeck.slice(15,30);
 
+// console.log(liveDeck1);
+// console.log(liveDeck2);
 
-// const cardCompare = () => {
-//     if (liveDeck1[0].age < liveDeck2[0].age) {
-//         let holdingDeck = liveDeck2.shift();
-//         let tempDeck = liveDeck1.shift();
-//         liveDeck1.push(tempDeck);
-//         liveDeck1.push(holdingDeck);
-//         console.log(`liveDeck1 length is ${liveDeck1.length}`);
-//         console.log(`liveDeck2 length is ${liveDeck2.length}`);
-//     } else if (liveDeck2[0].age < liveDeck1[0].age) {
-//         let holdingDeck = liveDeck1.shift();
-//         let tempDeck = liveDeck2.shift();
-//         liveDeck2.push(tempDeck);
-//         liveDeck2.push(holdingDeck);
-//         console.log(`liveDeck1 length is ${liveDeck1.length}`);
-//         console.log(`liveDeck2 length is ${liveDeck1.length}`);
-//     }  else {
-//         holdingDeck = liveDeck1.shift()+liveDeck2.shift();
-//         console.log(`liveDeck2 length is ${holdingDeck.length}`);
-//     }
-// }
+const cardCompareAge = () => {
+    if (liveDeck1[0].age < liveDeck2[0].age) {
+        let holdingDeck = liveDeck2.shift();
+        let tempDeck = liveDeck1.shift();
+        liveDeck1.push(holdingDeck);
+        liveDeck1.push(tempDeck);
+        // console.log(`liveDeck1 length is ${liveDeck1.length}`);
+        // console.log(`liveDeck2 length is ${liveDeck2.length}`);
+    } else if (liveDeck2[0].age < liveDeck1[0].age) {
+        let holdingDeck = liveDeck1.shift();
+        let tempDeck = liveDeck2.shift();
+        liveDeck2.push(holdingDeck);
+        liveDeck2.push(tempDeck);
+        // console.log(`liveDeck1 length is ${liveDeck1.length}`);
+        // console.log(`liveDeck2 length is ${liveDeck2.length}`);
+    }  else {
+        holdingDeck = liveDeck1.shift()
+        tempDeck = liveDeck2.shift();
+        // console.log(`liveDeck1 length is ${liveDeck1.length}`);
+        // console.log(`liveDeck2 length is ${liveDeck2.length}`);
+    }
+}
+
+
+
+if (liveDeck1.length == 30){
+    console.log("Player One wins")
+} else if (liveDeck2.length == 30) {
+    console.log("Player Two wins")
+} else {
+    console.log("Try again...")
+}
